@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E5A2F419AE0ECC005BBE59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48E5A2F319AE0ECC005BBE59 /* Images.xcassets */; };
 		7462256B173DCADA003EE853 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7462256A173DCADA003EE853 /* UIKit.framework */; };
 		7462256D173DCADA003EE853 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7462256C173DCADA003EE853 /* Foundation.framework */; };
 		7462256F173DCADA003EE853 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7462256E173DCADA003EE853 /* CoreGraphics.framework */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48E5A2F319AE0ECC005BBE59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74622567173DCADA003EE853 /* OCR-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCR-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7462256A173DCADA003EE853 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7462256C173DCADA003EE853 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -255,6 +257,7 @@
 				7462258E173DCD74003EE853 /* ResultsViewController.mm */,
 				746226E4173DDDC9003EE853 /* ImageProcessing.h */,
 				746226E5173DDDC9003EE853 /* ImageProcessing.mm */,
+				48E5A2F319AE0ECC005BBE59 /* Images.xcassets */,
 				74622571173DCADA003EE853 /* Supporting Files */,
 			);
 			path = "OCR-Example";
@@ -530,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74622575173DCADA003EE853 /* InfoPlist.strings in Resources */,
+				48E5A2F419AE0ECC005BBE59 /* Images.xcassets in Resources */,
 				7462257D173DCADA003EE853 /* Default.png in Resources */,
 				7462257F173DCADA003EE853 /* Default@2x.png in Resources */,
 				74622581173DCADA003EE853 /* Default-568h@2x.png in Resources */,
@@ -636,8 +640,11 @@
 		7462258B173DCADA003EE853 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCR-Example/OCR-Example-Prefix.pch";
@@ -647,7 +654,9 @@
 					"\"$(SRCROOT)/OCR-Example/tesseract-ios-lib/lib\"",
 					"\"$(SRCROOT)/External/tesseract-ios-lib/lib\"",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -655,8 +664,11 @@
 		7462258C173DCADA003EE853 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OCR-Example/OCR-Example-Prefix.pch";
@@ -667,6 +679,7 @@
 					"\"$(SRCROOT)/External/tesseract-ios-lib/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -64,6 +64,7 @@
                              completion:^(BOOL finished) {
                                  self.loadingView.hidden = YES;
                                  [self.resultsTextView setText:[tesseract recognizedText]];
+                                 [tesseract clear];
                              }];
         });
     });
